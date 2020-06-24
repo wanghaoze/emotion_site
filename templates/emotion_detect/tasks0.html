@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div {
+width:310px;
+height:180px;
+font-size:20px;
+background-color:green;
+display:none;
+}
+
+button {
+width:100px;
+}
+
+.active {
+background-color:red;
+}
+
+.show {
+display: block;
+}
+</style>
+</head>
+<body>
+<button class='active'>男1号</button>
+<button>男2号</button>
+<button>男3号</button>
+<div class="show">
+      姓名：张大牛<br/>
+外号：老牛<br/>
+性别：男<br/>
+爱好：女<br/>
+最喜欢的事：我开心就好<br/>
+</div>
+<div>
+曹操，666666
+</div>
+<div>
+刘备，888888
+</div>
+</body>
+<script>
+    var aButton = document.getElementsByTagName('button');
+    var aDiv = document.getElementsByTagName('div');
+
+//给每一个button都添加点击事件
+    for (var i = 0; i < aButton.length; i++) {
+//通过给button自定义属性来解决
+        aButton[i].index=i;//每个键存储一下
+        aButton[i].onclick = function () {
+//点击事件的实现？？  this就是点击的button
+            for (var j = 0; j < aButton.length; j++) {
+                aButton[j].className = '';
+                aDiv[j].className = '';
+            }
+//再给应该添加的对象添加className
+            this.className = 'active';
+            aDiv[this.index].className = 'show';
+        };
+    }
+</script>
+</html>

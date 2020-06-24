@@ -1,0 +1,12 @@
+#top{
+    background-position-x: 320px;
+    background: white image("background.jpg") no-repeat top;
+    margin-left: 0px;
+	margin-top: 0px;
+}
+.btnStyle1 {
+    background-color: aliceblue;
+    border-radius: 6px;
+    width: 100px;
+    height: 50px;
+}

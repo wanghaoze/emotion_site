@@ -1,0 +1,19 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    color: red;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container > div > div {
+    background-color: springgreen;
+    font-size: 20px;
+    margin: 30px;
+    padding: 20px;
+    width: 200px;;
+}

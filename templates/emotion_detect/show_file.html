@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html lang="CN-zh">
+<head>
+    <meta charset="UTF-8">
+    <title>人脸表情识别</title>
+    <link href="/static/css/styles_begin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function openFile(){
+
+        }
+        <!-- 开始输入按钮响应事件 -->
+        function bgn_ipt() {
+
+        }
+    </script>
+</head>
+
+<form method="post">
+<body id="top" >
+<div class="container">
+
+    <div class="row" >
+        <div id="fk" class="col-sm-5" align="left" style="width: 10%;height: 80%; padding-top: 11%;padding-left: 30.7%">
+            <br>
+            <br>
+            <form><input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"></form>
+            <button class="btnStyle1" type="button" name="停止输入" id="stop_input"
+                    value="停止输入" onclick="window.open(location.href='../',_parent)">主页</button>
+            <button class="btnStyle1" type="reset" name="重置" id="reset"
+                    value="重置" onclick="window.open(location.href='../begin',_parent)">重置</button>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div  class="col-sm-5" align="left">
+            <div style="margin-top: 30px; margin-left: 0;width: 420px;height:280px;
+            display:flex;justify-content:center;align-items:center;" >
+                {% if target_img %}<img id="image_1" src='/static/image/original_img.jpg' onmouseout="this.src='/static/image/target_img.jpg'"
+                                        onmouseover="this.src='/static/image/original_img.jpg'"
+                                        style="height: 280px;width: 420px">{% endif %}
+            </div>
+            <script>
+
+            </script>
+            <div style="margin-top: 30px; margin-left: 0;width: 420px;height:280px;
+            display:flex;justify-content:center;align-items:center;" id="inputImage">
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td>{{ age }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td>{{ beauty }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td>{{ gender }}</td>
+                    <td>{{ gender_pro }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td>{{ emotion }}</td>
+                    <td>{{ emotion_pro }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td>{{ expression }}</td>
+                    <td>{{ expression_pro }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td>{{ race }}</td>
+                    <td>{{ race_pro }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td>{{ glasses }}</td>
+                    <td>{{ glasses_pro }}</td>
+                </tr>
+            {% elif emotion %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td>{{ emotion }}</td>
+                <td>{{ emotion_pro }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</form>
+</html>

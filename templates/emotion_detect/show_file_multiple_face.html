@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html lang="CN-zh">
+<head>
+    <meta charset="UTF-8">
+    <title>人脸表情识别</title>
+    <link href="/static/css/styles_begin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        table {
+
+            display: none;}
+        .show {display: table;}
+    </style>
+    <script>
+
+    var message;
+    var path = '/static/image/target_img0.jpg';
+    var img;
+    var age;
+    var beauty;
+    var gender;
+    var gender_pro;
+    var emotion;
+    var emotion_pro;
+    var expression;
+    var expression_pro;
+    document.addEventListener('DOMContentLoaded', function () {
+       document.querySelectorAll('.img_chg').forEach(button => {
+           button.onclick = () => {
+                var aTable = document.getElementsByClassName('table');
+                var aDiv = document.getElementsByTagName('table');
+               message = button.dataset.num;
+               path = '/static/image/target_img' + message + '.jpg' ;
+               img = document.querySelector('#image_1');
+               img.src = path;
+               {#alert(path);#}
+               age = document.querySelector('#age');
+               for (var j = 0; j < aTable.length; j++) {
+                aTable[j].className = "table table-sm table-dark"
+                }
+               aTable[message].className = "table table-sm table-dark show";
+
+           };
+       });
+
+    });
+        <!-- 开始输入按钮响应事件 -->
+    </script>
+</head>
+
+{#<form method="post">#}
+<body id="top" >
+<div class="container">
+
+    <div class="row" >
+        <div id="fk" class="col-sm-5" align="left" style="width: 10%;height: 80%; padding-top: 11%;padding-left: 30.7%">
+            <br>
+            <br>
+{#            <form><input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"></form>#}
+{#            <button class="btnStyle1" type="button" name="开始输入" id="begin_input"#}
+{#                    value="开始输入" onclick="">开始输入</button>#}
+            <button class="btnStyle1" type="button" name="停止输入" id="stop_input"
+                    value="停止输入" onclick="window.open(location.href='../',_parent)">主页</button>
+            <button class="btnStyle1" type="reset" name="重置" id="reset"
+                    value="重置" onclick="window.open(location.href='../begin',_parent)">重置</button>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div  class="col-sm-5" align="left">
+            <div style="margin-top: 16px; margin-left: 0;width: 420px;height:280px;
+            display:flex;justify-content:center;align-items:center;" >
+                <img id="image_1" src='/static/image/target_img0.jpg'
+                                        style="height:280px;width:420px" alt=""
+                        onmouseover="this.src='/static/image/original_img.jpg'"
+                                        onmouseout="this.src=path">
+            </div>
+            <script>
+            </script>
+            <div style="margin-top: 16px; margin-left: 0;width: 420px;height:20px;
+            display:flex;justify-content:center;align-items:center;" >
+                <div class = “ btn-group” >
+                    {% for i in img_num %}
+                        <input type="button" class="img_chg" value={{ i }} name='{{ i }}' data-num={{ i }}>
+                    {% endfor %}
+                </div>
+            </div>
+            <div style="margin-top: 16px; margin-left: 0;width: 420px;height:280px;
+            display:flex;justify-content:center;align-items:center;" id="inputImage" >
+                <table class="table table-sm table-dark show" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age0 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age0 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty0 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender0 }}</td>
+                    <td id="gender_pro">{{ gender_pro0 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion0 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro0 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression0 }}</td>
+                    <td id="expression_pro">{{ expression_pro0 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race0 }}</td>
+                    <td id="race_pro">{{ race_pro0 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses0 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro0 }}</td>
+                </tr>
+            {% elif emotion0 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion0 }}</td>
+                <td id="emotion_pro">{{ emotion_pro0 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age1 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age1 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty1 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender1 }}</td>
+                    <td id="gender_pro">{{ gender_pro1 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion1 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro1 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression1 }}</td>
+                    <td id="expression_pro">{{ expression_pro1 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race1 }}</td>
+                    <td id="race_pro">{{ race_pro1 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses1 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro1 }}</td>
+                </tr>
+            {% elif emotion1 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion1 }}</td>
+                <td id="emotion_pro">{{ emotion_pro1 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age2 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age2 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty2 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender2 }}</td>
+                    <td id="gender_pro">{{ gender_pro2 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion2 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro2 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression2 }}</td>
+                    <td id="expression_pro">{{ expression_pro2 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race2 }}</td>
+                    <td id="race_pro">{{ race_pro2 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses2 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro2 }}</td>
+                </tr>
+            {% elif emotion2 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion2 }}</td>
+                <td id="emotion_pro">{{ emotion_pro2 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age3 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age3 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty3 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender3 }}</td>
+                    <td id="gender_pro">{{ gender_pro3 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion3 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro3 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression3 }}</td>
+                    <td id="expression_pro">{{ expression_pro3 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race3 }}</td>
+                    <td id="race_pro">{{ race_pro3 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses3 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro3 }}</td>
+                </tr>
+            {% elif emotion3 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion3 }}</td>
+                <td id="emotion_pro">{{ emotion_pro3 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age4 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age4 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty4 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender4 }}</td>
+                    <td id="gender_pro">{{ gender_pro4 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion4 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro4 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression4 }}</td>
+                    <td id="expression_pro">{{ expression_pro4 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race4 }}</td>
+                    <td id="race_pro">{{ race_pro4 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses4 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro4 }}</td>
+                </tr>
+            {% elif emotion4 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion4 }}</td>
+                <td id="emotion_pro">{{ emotion_pro4 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age5 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age5 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty5 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender5 }}</td>
+                    <td id="gender_pro">{{ gender_pro5 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion5 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro5 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression5 }}</td>
+                    <td id="expression_pro">{{ expression_pro5 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race5 }}</td>
+                    <td id="race_pro">{{ race_pro5 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses5 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro5 }}</td>
+                </tr>
+            {% elif emotion5 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion5 }}</td>
+                <td id="emotion_pro">{{ emotion_pro5 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+                <table class="table table-sm table-dark" style="width: 420px;height: 280px">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">属性</th>
+                    <th scope="col">值</th>
+                    <th scope="col">置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%  if age6 %}
+                <tr>
+                   <th scope="row">1</th>
+                    <td>年龄</td>
+                    <td id="age">{{ age6 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>颜值</td>
+                    <td id="beauty">{{ beauty6 }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>性别</td>
+                    <td id="gender">{{ gender6 }}</td>
+                    <td id="gender_pro">{{ gender_pro6 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>情绪</td>
+                    <td id="emotion">{{ emotion6 }}</td>
+                    <td id="emotion_pro">{{ emotion_pro6 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>表情</td>
+                    <td id="expression">{{ expression6 }}</td>
+                    <td id="expression_pro">{{ expression_pro6 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>种族</td>
+                    <td id="race">{{ race6 }}</td>
+                    <td id="race_pro">{{ race_pro6 }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>是否佩戴眼镜</td>
+                    <td id="glasses">{{ glasses6 }}</td>
+                    <td id="glasses_pro">{{ glasses_pro6 }}</td>
+                </tr>
+            {% elif emotion6 %}
+                <th scope="row">1</th>
+                <td>表情</td>
+                <td id="emotion">{{ emotion6 }}</td>
+                <td id="emotion_pro">{{ emotion_pro6 }}</td>
+            {% endif %}
+            </tbody>
+        </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{#</form>#}
+</html>

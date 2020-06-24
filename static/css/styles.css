@@ -1,0 +1,19 @@
+{% load staticfiles %}
+#top{
+    background-position-x: 320px;
+    background: url("/static/image/background.jpg") no-repeat top;
+    margin-right: 40px;
+	margin-top: 25px;
+}
+.btnStyle1 {
+    background-color: aliceblue;
+    border-radius: 6px;
+    width: 100px;
+    height: 50px;
+}
+.btnStyle1:hover {
+    background-color: lightblue;
+    border-radius: 6px;
+    width: 100px;
+    height: 50px;
+}
