@@ -10,43 +10,43 @@
 
 首页
 
-![捕获5](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获5.JPG)
+![bu5](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu5.JPG)
 
-![](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获6.JPG)
+![](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu6.JPG)
 
 
 
 联网模式下：
 
-![捕获1](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获1.JPG)
+![bu1](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu1.JPG)
 
-![捕获2](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获2.JPG)
+![bu2](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu2.JPG)
 
-![捕获3](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获3.JPG)
+![bu3](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu3.JPG)
 
-![捕获4](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获4.JPG)
+![bu4](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu4.JPG)
 
 
 
-![捕获7](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获7.JPG)
+![bu7](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu7.JPG)
 
 本地模式下：
 
-![捕获9](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获9.JPG)
+![bu9](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu9.JPG)
 
 
 
-![捕获10](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获10.JPG)
+![bu10](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu10.JPG)
 
 异常处理：
 
-![捕获8](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获8.JPG)
+![bu8](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu8.JPG)
 
-![捕获11](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获11.JPG)
+![bu11](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu11.JPG)
 
-![捕获12](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获12.JPG)
+![bu12](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu12.JPG)
 
-上传成功：![捕获](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获.JPG)
+上传成功：![bu](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu.JPG)
 
 ## 结语
 
