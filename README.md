@@ -10,43 +10,43 @@
 
 首页
 
-![捕获5](C:\Users\whzgo\Desktop\捕获5.JPG)
+![捕获5](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获5.JPG)
 
-![](C:\Users\whzgo\Desktop\捕获6.JPG)
+![](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获6.JPG)
 
 
 
 联网模式下：
 
-![捕获1](C:\Users\whzgo\Desktop\捕获1.JPG)
+![捕获1](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获1.JPG)
 
-![捕获2](C:\Users\whzgo\Desktop\捕获2.JPG)
+![捕获2](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获2.JPG)
 
-![捕获3](C:\Users\whzgo\Desktop\捕获3.JPG)
+![捕获3](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获3.JPG)
 
-![捕获4](C:\Users\whzgo\Desktop\捕获4.JPG)
+![捕获4](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获4.JPG)
 
 
 
-![捕获7](C:\Users\whzgo\Desktop\捕获7.JPG)
+![捕获7](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获7.JPG)
 
 本地模式下：
 
-![捕获9](C:\Users\whzgo\Desktop\捕获9.JPG)
+![捕获9](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获9.JPG)
 
 
 
-![捕获10](C:\Users\whzgo\Desktop\捕获10.JPG)
+![捕获10](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获10.JPG)
 
 异常处理：
 
-![捕获8](Https://github.com/wanghaoze/emotion_site/tree/master/mdpic/捕获8.JPG)
+![捕获8](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获8.JPG)
 
-![捕获11](C:\Users\whzgo\Desktop\捕获11.JPG)
+![捕获11](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获11.JPG)
 
-![捕获12](C:\Users\whzgo\Desktop\捕获12.JPG)
+![捕获12](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获12.JPG)
 
-上传成功：![捕获](C:\Users\whzgo\Desktop\捕获.JPG)
+上传成功：![捕获](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/捕获.JPG)
 
 ## 结语
 
