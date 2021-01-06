@@ -10,43 +10,43 @@
 
 首页
 
-![bu5](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu5.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu5.JPG)
 
-![](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu6.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu6.JPG)
 
 
 
 联网模式下：
 
-![bu1](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu1.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu1.JPG)
 
-![bu2](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu2.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu2.JPG)
 
-![bu3](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu3.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu3.JPG)
 
-![bu4](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu4.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu4.JPG)
 
 
 
-![bu7](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu7.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu7.JPG)
 
 本地模式下：
 
-![bu9](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu9.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu9.JPG)
 
 
 
-![bu10](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu10.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu10.JPG)
 
 异常处理：
 
-![bu8](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu8.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu8.JPG)
 
-![bu11](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu11.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu11.JPG)
 
-![bu12](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu12.JPG)
+![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu12.JPG)
 
-上传成功：![bu](Https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu.JPG)
+上传成功：![](https://github.com/wanghaoze/emotion_site/blob/master/mdpic/bu.JPG)
 
 ## 结语
 
